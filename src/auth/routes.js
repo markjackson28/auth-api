@@ -8,6 +8,8 @@ const basicAuth = require('./middleware/basic.js')
 const bearerAuth = require('./middleware/bearer.js')
 const permissions = require('./middleware/acl.js')
 
+authRouter.use(express.json());
+
 authRouter.get('/', (req, res, next) => {
   res.status(200).send("Access Control Lab08");
 });
