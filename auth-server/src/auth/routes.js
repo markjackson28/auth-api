@@ -8,6 +8,10 @@ const basicAuth = require('./middleware/basic.js')
 const bearerAuth = require('./middleware/bearer.js')
 const permissions = require('./middleware/acl.js')
 
+authRouter.get('/', (req, res, next) => {
+  res.status(200).send("Access Control Lab08");
+});
+
 authRouter.post('/signup', async (req, res, next) => {
   try {
     let userRecord = await users.create(req.body);

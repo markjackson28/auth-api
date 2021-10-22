@@ -10,9 +10,9 @@ const errorHandler = require('./error-handlers/500.js');
 const notFound = require('./error-handlers/404.js');
 const authRoutes = require('./auth/routes.js');
 // Added
-const logger = require('../src/auth/middleware/logger');
+const logger = require('./middleware/logger');
 const v1Routes = require('../src/api/routes/v1');
-const v2Routes = require('../src/api/routes/v2')
+const v2Routes = require('../src/api/routes/v2');
 
 // Prepare the express app
 const app = express();
